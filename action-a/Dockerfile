@@ -9,7 +9,7 @@ LABEL "repository"="http://github.com/octocat/hello-world"
 LABEL "homepage"="http://github.com/actions"
 LABEL "maintainer"="Octocat <octocat@github.com>"
 
-RUN sudo pip install django
+RUN pip install django
 
 ADD entry.py /entry.py
 ENTRYPOINT ["python3", "/entry.py"]
