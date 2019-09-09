@@ -1,4 +1,4 @@
-FROM debian:9.5-slim
+FROM python:3.7.4-alpine3.10
 
 LABEL "com.github.actions.name"="Hello World"
 LABEL "com.github.actions.description"="Write arguments to the standard output"
@@ -9,6 +9,7 @@ LABEL "repository"="http://github.com/octocat/hello-world"
 LABEL "homepage"="http://github.com/actions"
 LABEL "maintainer"="Octocat <octocat@github.com>"
 
-ADD entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
+RUN pip install django
+
+ADD entry.py /entry.py
+ENTRYPOINT ["python3", "/entry.py"]
