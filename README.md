@@ -1,4 +1,5 @@
 ![badge](https://github.com/linzeyang/hello-github-actions/workflows/Master%20Workflow/badge.svg)
+![code-style](https://img.shields.io/badge/code%20style-black-000000.svg)
 
 ## Welcome to "Hello World" with GitHub Actions
 
